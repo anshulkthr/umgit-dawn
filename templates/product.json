@@ -47,7 +47,7 @@
           "type": "ship_return",
           "settings": {
             "icon_1": "shopify:\/\/shop_images\/7-days-return.png",
-            "heading_1": "",
+            "heading_1": "free returns",
             "subheading_1": "for 7 days",
             "icon_2": "shopify:\/\/shop_images\/fast-delivery.png",
             "heading_2": "free delivery",
