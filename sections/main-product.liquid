@@ -532,6 +532,8 @@
               {% render 'icon-with-text',
                 block: block
               %}
+            {%- when 'ship_return' -%}
+              {% render 'shipping-return', block: block %}
           {%- endcase -%}
         {%- endfor -%}
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
@@ -587,7 +589,7 @@
     </script>
     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
   {%- endif -%}
-
+  
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       function isIE() {
@@ -844,6 +846,45 @@
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
       "limit": 1
+    },
+    {
+      "type": "ship_return",
+      "name": "t:sections.main-product.blocks.ship_return.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_1",
+          "label": "t:sections.main-product.blocks.ship_return.settings.image_1.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_1",
+          "label": "t:sections.main-product.blocks.ship_return.settings.heading_1.label",
+          "info": "t:sections.main-product.blocks.ship_return.settings.heading.info"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "subheading_1",
+          "label": "t:sections.main-product.blocks.ship_return.settings.subheading_1.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_2",
+          "label": "t:sections.main-product.blocks.ship_return.settings.image_2.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading_2",
+          "label": "t:sections.main-product.blocks.ship_return.settings.heading_2.label",
+          "info": "t:sections.main-product.blocks.ship_return.settings.heading.info"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "subheading_2",
+          "label": "t:sections.main-product.blocks.ship_return.settings.subheading_2.label"
+        }
+      ]
     },
     {
       "type": "share",

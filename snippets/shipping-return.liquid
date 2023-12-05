@@ -1,0 +1,65 @@
+{% comment %}
+  Renders free return and fast delivery icons with heading, subheading
+
+  Accepts:
+  - block: {Object} passes in the block information.
+
+
+  Usage:
+  {% render 'shipping-return',
+    block: block
+  %}
+{% endcomment %}
+{%- liquid
+  assign heading_1_empty = false
+  assign heading_2_empty = false
+
+  if block.settings.heading_1 == empty
+    assign heading_1_empty = true
+  endif
+
+  if block.settings.heading_2 == empty
+    assign heading_2_empty = true
+  endif
+
+  
+-%}
+<section data-section-id="shipping-return-section">
+  <div class="shipping-return-section--wrapper">
+    {%- unless heading_1_empty -%}
+      <div class="iconsdiv">
+        <img
+          src="{{ block.settings.icon_1 | image_url }}"
+          {% if block.settings.icon_1.alt != blank %}
+            alt="{{ block.settings.icon_1.alt | escape }}"
+          {% else %}
+            role="presentation" 
+          {% endif %}
+          height="auto"
+          width="auto"
+          loading="lazy"
+        >
+        <span>{{ block.settings.heading_1 }}</span>
+        <p>{{ block.settings.subheading_1 }}</p>
+      </div>
+    {%- endunless -%}
+
+    {%- unless heading_2_empty -%}
+      <div class="iconsdiv">
+        <img
+          src="{{ block.settings.icon_2 | image_url }}"
+          {% if block.settings.icon_2.alt != blank %}
+            alt="{{ block.settings.icon_2.alt | escape }}"
+          {% else %}
+            role="presentation"
+          {% endif %}
+          height="auto"
+          width="auto"
+          loading="lazy"
+        >
+        <span>{{ block.settings.heading_2 }}</span>
+        <p>{{ block.settings.subheading_2 }}</p>
+      </div>
+    {%- endunless -%}
+  </div>
+</section>
