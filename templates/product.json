@@ -43,22 +43,22 @@
           "settings": {
           }
         },
-        "ship_return": {
-          "type": "ship_return",
-          "settings": {
-            "icon_1": "shopify:\/\/shop_images\/7-days-return.png",
-            "heading_1": "free returns",
-            "subheading_1": "for 7 days",
-            "icon_2": "shopify:\/\/shop_images\/fast-delivery.png",
-            "heading_2": "free delivery",
-            "subheading_2": "anywhere in india"
-          }
-        },
         "share": {
           "type": "share",
           "disabled": true,
           "settings": {
             "share_label": "Share"
+          }
+        },
+        "ship_return": {
+          "type": "ship_return",
+          "settings": {
+            "icon_1": "shopify:\/\/shop_images\/7-days-return.png",
+            "heading_1": "",
+            "subheading_1": "for 7 days",
+            "icon_2": "shopify:\/\/shop_images\/fast-delivery.png",
+            "heading_2": "free delivery",
+            "subheading_2": "anywhere in india"
           }
         }
       },
@@ -70,8 +70,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "ship_return",
-        "share"
+        "share",
+        "ship_return"
       ],
       "settings": {
         "enable_sticky_info": true,
