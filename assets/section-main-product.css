@@ -1384,6 +1384,44 @@ a.product__text {
   margin-bottom: var(--icon-size);
 }
 
+/* shipping and return icon with heading and subheading block */
+.shipping-return-section--wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+}
+.iconsdiv {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  flex: 1;
+}
+.iconsdiv img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+.iconsdiv span {
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0;
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+.iconsdiv p {
+  color: #333;
+  letter-spacing: 0;
+  text-transform: capitalize;
+  line-height: 17px;
+  text-align: center;
+  margin: 0;
+}
+
 /* SKU block */
 
 .product__sku.visibility-hidden::after {
